@@ -1,0 +1,169 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+body {
+    height: 100vh;
+    font-family: Montserrat;
+    background: rgb(117,18,85);
+    background: linear-gradient(250deg, rgba(117,18,85,1) 0%, rgba(45,16,47,1) 80%);
+    color: white;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+#page {
+
+}
+/***** Sidebar Section *****/
+#sidebar {
+    width: 15%;
+    background-color: #220d22b8;
+    height: 100vh;
+    padding: 50px 30px;
+    position: fixed;
+    top: 0;
+    text-align: center;
+}
+#sidebar a {
+    width: fit-content;
+    display: inline-block;
+    margin: 0 0 50px;
+}
+#sidebar h2 {
+    margin: 0;
+}
+#sidebar h2 .name-color {
+    color: #f43f5e;
+    font-size: 45px;
+}
+#sidebar .menu-box {
+    padding-left: 25px;
+}
+#sidebar .menu:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+#sidebar .box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    margin: 0;
+    transition: 0.2s;
+    padding: 10px;
+}
+#sidebar .menu .box:hover,
+#sidebar .box.active {
+    color: #fb7185;
+}
+#sidebar .menu .box svg,
+#sidebar .menu .box i {
+    font-size: 20px;
+}
+#sidebar .menu .box h3 {
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+}
+/***** Content Section *****/
+#content {
+    text-align: right;
+    margin-left: calc(15% + 60px);
+    padding-left: 50px;
+    padding-right: 250px;
+    padding-top: 25px;
+}
+/***** Header Section *****/
+#content header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+#content header .acc-box {
+
+}
+#content header .acc-box button {
+    width: 110px;
+    color: #fff;
+    border-radius: 5px 20px 5px 5px;
+    padding: 10px 18px;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    border: 2px solid white;
+    overflow: hidden;
+    font-size: 16px;
+}
+#content header .acc-box button:first-of-type {
+    margin-right: 5px;
+}
+#content header .acc-box button:last-of-type {
+    margin-left: 5px;
+}
+#content header .acc-box button:hover {
+    color: #fb7185;
+}
+#content header .acc-box button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #ffffff;
+    border-radius: 2px 15px 2px 2px;
+    transition: all 0.3s ease;
+}
+#content header .acc-box button:hover::after {
+    left: 0;
+    width: 100%;
+}
+#content header .acc-box button:active {
+    top: 2px;
+  }
+.search-container {
+    background: #fff;
+    height: 30px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+.search-container:hover > .search-input {
+    width: 400px;
+}
+.search-container .search-input {
+    background: transparent;
+    border: none;
+    outline:none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+}
+.search-container .search-btn .fas {
+    color: #fb7185;
+}
+@keyframes hoverShake {
+  0% {transform: skew(0deg,0deg);}
+  25% {transform: skew(5deg, 5deg);}
+  75% {transform: skew(-5deg, -5deg);}
+  100% {transform: skew(0deg,0deg);}
+}
+.search-container:hover {
+  animation: hoverShake 0.15s linear 3;
+}
